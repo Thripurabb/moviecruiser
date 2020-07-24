@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        
+        <style>
+            #moviefilter-icon
+            {
+                color: white;
+                vertical-align: middle;
+                padding-right: 7px;
+                font-size: 25px;
+            }
+            #head-nav
+            {
+                background-color: darkred;
+                
+            }
+            #foot
+            {
+                background-color: darkred;
+                color: white;
+                vertical-align: middle;
+                margin-top: 14px;
+            }
+            #copyright-icon
+            {
+                color: white;
+                vertical-align: middle;
+                margin-bottom: 3px;
+            }
+            #edit-ctnr
+            {
+                height: 300px;
+            }
+            .editmenu-heading
+            {
+                font-size: 33px;
+            }
+            #successmsg-col
+            {
+                background-color: azure;
+                
+                border-radius: 4px;                
+            }
+            .successmsg-txt
+            {
+                color: green;
+                padding-top: 6px;
+                margin-bottom: 6px;
+                
+            }
+            
+            
+            
+        </style>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark " id="head-nav">
+            
+                <div class="navbar-header">
+                    <i class="fas fa-film" id="moviefilter-icon"></i><a class="navbar-brand" href="#" style="vertical-align: middle">Movie Cruiser</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks" aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navlinks">
+                    <div class="navbar-nav navbar-right" >
+                        <a class="nav-item nav-link" href="movie-list-admin.html" id="movie-list">Movie Lists</a>
+                        
+                    </div>
+                </div>
+           
+        </nav>
+        
+        <div class="container" id="edit-ctnr">
+            <div class="row">
+                <div class="col">
+                    <p class="editmenu-heading">Edit Movie</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" id="successmsg-col">
+                    <p class="successmsg-txt">Movie details saved successfully.</p>
+                </div>
+            </div>            
+        </div>
+        
+        <footer class="page-footer font-small " id="foot">
+            <div class="container-fluid">
+                <i class="fas fa-copyright" id="copyright-icon"></i> Copyright 2020
+            </div>
+            
+        </footer>
+        
+    </body>
+</html>

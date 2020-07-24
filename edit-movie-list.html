@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        
+        <style>
+            #moviefilter-icon
+            {
+                color: white;
+                vertical-align: middle;
+                padding-right: 7px;
+                font-size: 25px;
+            }
+            #head-nav
+            {
+                background-color: darkred;
+                
+            }
+            #foot
+            {
+                background-color: darkred;
+                color: white;
+                vertical-align: middle;
+                margin-top: 14px;
+            }
+            #copyright-icon
+            {
+                color: white;
+                vertical-align: middle;
+                margin-bottom: 3px;
+            }
+            
+            .editmenu-heading
+            {
+                font-size: 35px;
+            }
+            #save-btn
+            {
+                background-color: darkred;
+                margin-top: 5px;
+                
+            }
+            
+            
+        </style>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark " id="head-nav">
+            
+                <div class="navbar-header">
+                    <i class="fas fa-film" id="moviefilter-icon"></i><a class="navbar-brand" href="#" style="vertical-align: middle">Movie Cruiser</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks" aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navlinks">
+                    <div class="navbar-nav navbar-right" >
+                        <a class="nav-item nav-link" href="movie-list-admin.html" id="movie-list">Movie Lists</a>
+                        
+                    </div>
+                </div>
+           
+        </nav>
+        <div class="container-fluid" >
+        <p class="editmenu-heading">Edit Movie</p>
+            <form class="editform" action="edit-movie-list-success.html" novalidate>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="movieNameLabel">Movie Name</label>
+                        <input type="text" class="form-control" id="movieNameLabel" required/>
+                        <div class="invalid-feedback">
+                            Movie Name is required<br/>
+                            Movie Name cannot exceed 200 characters
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-3 mb-3">
+                        <label for="boxofficeLabel">Box Office</label>
+                        <input type="text" class="form-control" id="boxofficeLabel" required/>
+                        <div class="invalid-feedback">
+                            Box Office is required<br/>
+                            Box Office can only contain numbers
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="dateoflaunchLabel">Date of Launch</label>
+                        <input type="text" id="dateoflaunchLabel" class="form-control" required/>
+                        <div class="invalid-feedback">
+                            Incorrect date format
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="genreLabel">Genre</label>
+                        <select id="genreLabel"class="form-control" >
+                            
+                            <option>Horror</option>
+                            <option>Science Fiction</option>
+                            <option>Romance</option>
+                            <option>Comedy</option>
+                            <option>Adventure</option>
+                            <option>Thriller</option>
+                            <option>Animation</option>
+                            <option>SuperHero</option>
+                            
+                        </select>
+                        <div class="invalid-feedback">
+                            Select atleast one genre
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="activeLabel">Active</label>
+                        <br/>
+                        <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="activeLabel" id="activeradio1" value="Yes" checked>
+                                <label class="form-check-label" for="activeradio1">Yes
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="activeLabel" id="activeradio2" value="No">
+                                <label class="form-check-label" for="activeradio2">No
+                                </label>
+                            </div>
+                        <div class="invalid-feedback">
+                            Select in stock status
+                        </div>
+      
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="col">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" >
+                            <label class="form-check-label" for="inlineCheckbox1">Teaser</label>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="form-row">
+                    <div class="col">
+                        <button class="btn btn-primary" type="submit" id="save-btn" >Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <footer class="page-footer font-small " id="foot">
+            <div class="container-fluid">
+                <i class="fas fa-copyright" id="copyright-icon"></i> Copyright 2020
+            </div>
+            
+        </footer>
+        
+        <script>
+            $('#dateoflaunchLabel').datepicker({ 
+                uiLibrary: 'bootstrap4',
+                format: 'dd/mm/yyyy'
+            });
+            (function(){
+                'use strict';
+                window.addEventListener('load',function(){
+                    var forms= document.getElementsByClassName('editform');
+                    var validation= Array.prototype.filter.call(forms,function(form){
+                        form.addEventListener('submit',function(event){
+                            if(form.checkValidity()==false)
+                                {
+                                    event.preventDefault();
+                                    event.stopPropagation();
+                                }
+                            form.classList.add('was-validated');
+                        },false);
+                    });
+                },false);
+            })();
+        </script>
+    </body>
+</html>

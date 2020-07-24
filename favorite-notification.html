@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        
+        <style>
+            #moviefilter-icon
+            {
+                color: white;
+                vertical-align: middle;
+                padding-right: 7px;
+                font-size: 25px;
+            }
+            #head-nav
+            {
+                background-color: darkred;
+                
+            }
+            #foot
+            {
+                background-color: darkred;
+                color: white;
+                vertical-align: middle;
+                margin-top: 14px;
+            }
+            #copyright-icon
+            {
+                color: white;
+                vertical-align: middle;
+                margin-bottom: 3px;
+            }
+            #outer-con
+            { 
+                margin-bottom: 8px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .favorite-txt
+            {
+                
+                font-size: 30px;
+                margin-left: 19px;
+                vertical-align: middle;
+                
+            }
+            #favorite-icon
+            {
+                font-size: 20px;  
+                color: red;
+            }
+            #items-con
+            {
+               text-align: left;
+               
+            }
+            #delete-icon
+            {
+                float: right;
+                color: dimgrey;
+            }
+            #count
+            {
+                float: right;
+                font-weight: 500;
+                margin-right: 5px;
+            }
+            #del-con
+            {
+                background-color: azure;
+            }
+            #deletemsg-txt
+            {
+                color: green;
+                padding-top: 8px;
+            }
+            
+            
+            
+        </style>
+        
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark " id="head-nav">
+            
+                <div class="navbar-header">
+                    <i class="fas fa-film" id="moviefilter-icon"></i><a class="navbar-brand" href="#" style="vertical-align: middle">Movie Cruiser</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlinks" aria-controls="links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navlinks">
+                    <div class="navbar-nav navbar-right" >
+                        <a class="nav-item nav-link" href="movie-list-customer.html" id="movie-list">Movie Lists</a>
+                        <a class="nav-item nav-link" href="favorite.html" id="favorite">Favorites</a>
+                    </div>
+                </div>
+           
+        </nav>
+        
+        <div class="container-fluid" id="outer-con">
+            <div class="row">
+                <p class="favorite-txt">Favorites <i class="material-icons" id="favorite-icon">favorite</i></p>
+                
+                 <div class="container-fluid" id="items-con">
+                <ul class="list-group">
+                    <div class="container" id="del-con">
+                        <p id="deletemsg-txt">Favorite movie deleted successfully.</p>
+                    </div>  
+                    <br/>
+                    <li class="list-group-item" id="items-txt">Gravity
+                        <a href="favorite-empty.html">
+                        <i class="material-icons" id="delete-icon">delete_forever</i>
+                        </a>
+                    </li>
+                    <li class="list-group-item" id="total-txt">Total Count<span id="count">1</span>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="page-footer font-small " id="foot">
+            <div class="container-fluid">
+                <i class="fas fa-copyright" id="copyright-icon"></i> Copyright 2020
+            </div>
+            
+        </footer>
+        
+    </body>
+</html>
